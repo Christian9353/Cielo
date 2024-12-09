@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Preguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla inicial -->
+        <div id="start-screen">
+            <h1>BougieLearn</h1>
+            <input type="text" id="userName" placeholder="Ingresa tu nombre">
+            <select id="grade">
+                <option value="" disabled selected>Selecciona tu grado</option>
+                <option value="1">1.º de Primaria</option>
+                <option value="2">2.º de Primaria</option>
+                <option value="3">3.º de Primaria</option>
+                <option value="4">4.º de Primaria</option>
+                <option value="5">5.º de Primaria</option>
+                <option value="6">6.º de Primaria</option>
+            </select>
+            <button id="startBtn">Comenzar</button>
+        </div>
+
+        <!-- Pantalla de preguntas -->
+        <div id="quiz-screen" style="display: none;">
+            <h2 id="subject-title"></h2>
+            <div id="question-container">
+                <p id="question"></p>
+                <div id="answers"></div>
+            </div>
+            <button id="nextBtn" style="display: none;">Siguiente</button>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="result-screen" style="display: none;">
+            <h1>¡Resultados!</h1>
+            <p id="result-summary"></p>
+            <button id="restartBtn">Volver a empezar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
