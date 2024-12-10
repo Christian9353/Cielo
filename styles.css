@@ -5,50 +5,12 @@ body {
     padding: 0;
     background-color: #f3f4f6;
     color: #333;
-    height: 100vh; /* Para ocupar toda la pantalla */
-    display: flex; /* Habilita el sistema de flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-direction: column; /* Para que los elementos se apilen verticalmente */
-    overflow: hidden; /* Evita que el contenido se desborde */
-}
-
-/* Imágenes al costado izquierdo */
-#left-images {
-    position: fixed;
-    top: 50%;
-    left: 20%; /* Ajustado para centrar más las imágenes */
-    transform: translateY(-50%);
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    z-index: -1; /* Asegura que las imágenes no tapen el contenido */
-}
-
-#left-images img {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    height: auto;
-    margin: 20px 0; /* Aumento de espacio entre las imágenes */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-}
-
-/* Imágenes al costado derecho */
-#right-images {
-    position: fixed;
-    top: 50%;
-    right: 20%; /* Ajustado para centrar más las imágenes */
-    transform: translateY(-50%);
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    z-index: -1; /* Asegura que las imágenes no tapen el contenido */
-}
-
-#right-images img {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    height: auto;
-    margin: 20px 0; /* Aumento de espacio entre las imágenes */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
+    overflow: hidden;
 }
 
 /* Contenedor de la aplicación */
@@ -59,15 +21,14 @@ body {
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
     border-radius: 20px;
     box-shadow: 4px 4px 10px #d1d1d1, -4px -4px 10px #ffffff;
-    position: relative; /* Para posicionar el logo dentro de #app */
 }
 
 /* Logo */
 #logo {
-    width: 150px; /* Ajusta el tamaño del logo según lo necesario */
+    width: 150px;
     height: auto;
     display: block;
-    margin: 0 auto 20px; /* Centra el logo y le da un margen inferior */
+    margin: 0 auto 20px;
 }
 
 /* Encabezados */
@@ -79,17 +40,7 @@ h1, h2 {
 }
 
 /* Estilos de los inputs y selects */
-input {
-    width: calc(96% - 20px);
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: inset 2px 2px 6px #d1d1d1, inset -2px -2px 6px #ffffff;
-}
-
-select {
+input, select {
     width: calc(100% - 20px);
     margin: 10px 0;
     padding: 10px;
@@ -99,11 +50,11 @@ select {
     box-shadow: inset 2px 2px 6px #d1d1d1, inset -2px -2px 6px #ffffff;
 }
 
-/* Botones principales */
+/* Botones */
 button {
     display: block;
     width: 100%;
-    margin: 20px auto; /* Centra el botón horizontalmente */
+    margin: 20px auto;
     padding: 15px;
     font-size: 18px;
     background: #007BFF;
@@ -148,8 +99,8 @@ button:hover {
     border-radius: 10px;
     color: #333;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #answers button:hover {
@@ -163,11 +114,6 @@ button:hover {
 }
 
 /* Pantalla de resultados */
-#result-screen {
-    display: none;
-    padding: 20px;
-}
-
 #result-summary {
     font-size: 18px;
     color: #28a745;
@@ -181,19 +127,9 @@ button:hover {
         margin: 10px;
     }
 
-    select {
-        font-size: 18px;
-        width: 100%;
-    }
-
-    input {
-        font-size: 18px;
-        width: 95%;
-    }
-
     button {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     h1, h2 {
@@ -202,28 +138,5 @@ button:hover {
 
     #question {
         font-size: 18px;
-    }
-
-    #answers button {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    /* Para pantallas pequeñas, las imágenes de los costados se mantienen fijas */
-    #left-images {
-        left: 15%; /* Ajustado para centrar más las imágenes */
-    }
-
-    #right-images {
-        right: 15%; /* Ajustado para centrar más las imágenes */
-    }
-
-    #left-images img, #right-images img {
-        width: 80px; /* Ajusta el tamaño para pantallas pequeñas */
     }
 }
